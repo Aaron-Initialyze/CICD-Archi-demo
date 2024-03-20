@@ -1,0 +1,24 @@
+{
+  "name": "cy_type",
+  "version": "1.0.0",
+  "description": "Cypress with Typescript Learning purpose",
+  "main": "index.js",
+  "scripts": {
+    "runner": "cypress open --e2e --browser chrome",
+    "run_all": "npx cypress run",
+    "run_headed": "npx cypress run --headed",
+    "record_test": "npx cypress run --record --key 1d82d477-ede3-42de-9fff-52457f618971 --headed"
+  },
+  "keywords": [
+    "cypress",
+    "typescript",
+    "learning"
+  ],
+  "author": "A G",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.6",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "typescript": "^5.4.2"
+  }
+}
