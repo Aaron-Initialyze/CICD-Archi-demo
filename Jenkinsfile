@@ -18,8 +18,8 @@ pipeline{
             steps{
                 bat '''cd Cy_Type
                         npm i'''
-                bat 'cd Cy_Type'
-                echo "Hi ${browser}, welcome"
+                bat '''cd Cy_Type
+                echo Hi ${browser}, welcome'''
                 bat 'dir'
             }
         }
