@@ -17,7 +17,8 @@ pipeline{
         stage('Testing'){
             steps{
                 bat '''cd Cy_Type
-                        npm i
+                        npm i'''
+                bat '''cd Cy_Type
                         npx cypress run --browser ${BROWSER}'''
             }
         }
