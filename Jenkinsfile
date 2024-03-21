@@ -36,7 +36,7 @@ pipeline{
     
     post{
         always{
-            emailext (attachLog: true, attachmentsPattern: '**/index.html', body: 'Test demo', compressLog: true, replyTo: 'aaron.godinho96@gmail.com', subject: 'Report from the jenkins pipepline build', to: 'agodinho@initialyze.com')  
+            emailext (attachLog: true, attachmentsPattern: '**/htmlreports/HTML_20Report/index.html', body: 'Test demo', compressLog: true, replyTo: 'aaron.godinho96@gmail.com', subject: 'Report from the jenkins pipepline build', to: 'agodinho@initialyze.com')  
         }
     }
 }
