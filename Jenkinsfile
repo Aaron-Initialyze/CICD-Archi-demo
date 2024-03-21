@@ -33,9 +33,6 @@ pipeline{
             emailext (attachLog: true, attachmentsPattern: 'cypress/reports/html/index.html', body: 'Test demo', compressLog: true, replyTo: 'aaron.godinho96@gmail.com', subject: 'Report from the jenkins pipepline build', to: 'agodinho@initialyze.com')  
             }
         }
-    
-    }
-            }
     }
 
     post{
