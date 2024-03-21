@@ -23,7 +23,7 @@ pipeline{
             }
             post{
                 always{
-                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Cy_Type/cypress/reports/html', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])            
+                    publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'Cy_Type/cypress/reports/html', reportFiles: 'index.html', reportName: 'Report', reportTitles: '', useWrapperFileDirectly: true])
                 }
             }
         }
@@ -36,7 +36,7 @@ pipeline{
     
     post{
         always{
-            emailext (attachLog: true, attachmentsPattern: '**/htmlreports/HTML_20Report/index.html', body: 'Test demo', compressLog: true, replyTo: 'aaron.godinho96@gmail.com', subject: 'Report from the jenkins pipepline build', to: 'agodinho@initialyze.com')  
+            emailext (attachLog: true, attachmentsPattern: '**/Report/index.html', body: 'Test demo', compressLog: true, replyTo: 'aaron.godinho96@gmail.com', subject: 'Report from the jenkins pipepline build', to: 'agodinho@initialyze.com')  
         }
     }
 }
