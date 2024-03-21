@@ -16,9 +16,8 @@ pipeline{
         }
         stage('Testing'){
             steps{
-                echo "%cd%"
-                bat "cd Cy_Type"
-                bat "npm i"
+                bat 'cd Cy_Type'
+                bat 'npm i'
                 bat "npx cypress run --browser ${BROWSER}"
             }
         }
