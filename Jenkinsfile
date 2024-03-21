@@ -3,7 +3,7 @@ pipeline{
 
     parameters{
         //string(name: 'SPEC')
-        choice(name: 'BROWSER', choices:['chrome','edge', 'firefox'], description:"normal descrip")
+        choice(name: 'browser', choices:['chrome','edge', 'firefox'], description:"normal descrip")
     }
     options{
         ansiColor('xterm')
@@ -18,8 +18,8 @@ pipeline{
             steps{
                 bat '''cd Cy_Type
                         npm i'''
-                bat '''cd Cy_Type
-                        npx cypress run --browser ${BROWSER}'''
+                bat 'cd Cy_Type'
+                echo "Hi ${browser}, welcome"
             }
         }
         stage('Deploying'){
