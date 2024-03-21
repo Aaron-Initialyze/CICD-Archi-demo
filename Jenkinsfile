@@ -2,8 +2,8 @@ pipeline{
     agent any
 
     parameters{
-        //string(name: 'SPEC')
         choice(name: 'browser', choices:['chrome','edge', 'firefox'], description:"normal descrip")
+        //string(name: 'SPEC')
     }
     options{
         ansiColor('xterm')
@@ -19,7 +19,7 @@ pipeline{
                 bat '''cd Cy_Type
                         npm i'''
                 bat '''cd Cy_Type
-                echo Hi ${params.browser}, welcome'''
+                echo Hi ${browser}, welcome'''
                 bat 'dir'
             }
         }
