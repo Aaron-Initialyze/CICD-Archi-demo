@@ -19,7 +19,7 @@ pipeline{
                 bat '''cd Cy_Type
                         npm i'''
                 bat '''cd Cy_Type
-                echo Hi ${browser}, welcome'''
+                echo Hi ${params.browser}, welcome'''
                 bat 'dir'
             }
         }
